@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (value) => {
-  const regex = /^$/i;
+  const regex = /^[9]?[0-9]{8}$/;
   const isEmpty = require('./isEmpty')(value);
   const isString = require('./isString')(value);
 
@@ -10,3 +10,4 @@ module.exports = (value) => {
 
   return regex.test(value);
 }
+
